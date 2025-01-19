@@ -1,0 +1,235 @@
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* White Mode */
+body.light-mode {
+  background-color: #fafafa;
+  color: #8b572a; /* Gold tone for text */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #daa520; /* Rich gold tone */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: inherit;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .menu a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: inherit;
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .menu a:hover {
+  color: #daa520;
+}
+
+.navbar .dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+.navbar .dark-mode-toggle:hover {
+  color: #daa520;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #fffbe7, #fef6e0);
+  color: #8b572a;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #daa520;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #b38a35;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Products Section */
+/* Products Section */
+.products {
+  padding: 2rem 1rem;
+  background-color: #fffef5;
+}
+
+.products h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #8b572a;
+  margin-bottom: 2rem;
+}
+
+.feature-list {
+  display: flex; /* Menggunakan Flexbox untuk menyusun produk secara horizontal */
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 1.5rem; /* Mengurangi jarak antar produk */
+}
+
+.product-card {
+  display: flex; /* Membuat produk-card menjadi flex container */
+  flex-direction: column; /* Menyusun gambar dan teks secara vertikal */
+  align-items: center; /* Mengatur agar teks berada di bawah gambar secara rapi */
+  border: 1px solid #ebd9b5;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  width: calc(
+    33% - 1rem
+  ); /* Mengatur lebar card agar ada 3 card dalam satu baris */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card img {
+  max-width: 150px; /* Mengatur ukuran gambar */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem; /* Memberikan jarak antara gambar dan teks */
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #8b572a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #333;
+  text-align: center; /* Menjaga teks deskripsi rata tengah */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff8e1;
+  color: #8b572a;
+  font-size: 0.9rem;
+}
+
+/* Dark Mode Specific */
+body.dark-mode .navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  color: #daa520;
+}
+
+body.dark-mode .products {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .product-card {
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+}
+
+body.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #daa520;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+
+.modal.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #daa520;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.close-button:hover {
+  background-color: #b38a35;
+}
