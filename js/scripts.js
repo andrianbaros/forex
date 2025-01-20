@@ -13,16 +13,16 @@ document.getElementById("language").addEventListener("change", (event) => {
   const selectedLanguage = event.target.value;
   const translations = {
     en: {
-      heroTitle: "Welcome to Cheesecake Delight",
-      heroText: "The best cheesecakes for every occasion.",
-      ctaButton: "Shop Now",
+      heroTitle: "Welcome to Trabar Exness ID",
+      heroText: "Join our community and enjoy exclusive benefits as a VIP member.",
+      ctaButton: "Join Now",
       productsTitle: "Our Cheesecakes",
       footerText: "© 2025 Cheesecake Delight. All rights reserved.",
     },
     id: {
-      heroTitle: "Selamat Datang di Cheesecake Delight",
-      heroText: "Kue keju terbaik untuk setiap acara.",
-      ctaButton: "Belanja Sekarang",
+      heroTitle: "Selamat Datang di Trabar Exness ID",
+      heroText: "Bergabunglah dengan komunitas kami dan nikmati berbagai keuntungan eksklusif sebagai anggota VIP.",
+      ctaButton: "Bergabung Sekarang",
       productsTitle: "Produk Cheesecake Kami",
       footerText: "© 2025 Cheesecake Delight. Hak cipta dilindungi.",
     },
