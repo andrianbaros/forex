@@ -9,14 +9,30 @@ body {
 /* White Mode */
 body.light-mode {
   background-color: #fafafa;
-  color: #8b572a; /* Gold tone for text */
+  color: #8b572a;
 }
+
+/* Dark Mode untuk Judul Section Products */
+body.dark-mode #products-title {
+  color: #daa520; /* Warna emas untuk judul */
+}
+
 
 /* Dark Mode */
 body.dark-mode {
   background-color: #1a1a1a;
-  color: #daa520; /* Rich gold tone */
+  color: #daa520; /* Warna teks dalam dark mode */
 }
+
+/* Dark Mode untuk Produk */
+body.dark-mode .product-card h3 {
+  color: #daa520; /* Warna emas */
+}
+
+body.dark-mode .product-card p {
+  color: #ffffff; /* Warna putih */
+}
+
 
 /* Navbar */
 .navbar {
@@ -101,25 +117,36 @@ body.dark-mode {
   margin-bottom: 2rem;
 }
 
+/* Default: Kotak sejajar secara horizontal */
 .feature-list {
-  display: flex; /* Menggunakan Flexbox untuk menyusun produk secara horizontal */
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 1.5rem; /* Mengurangi jarak antar produk */
+  display: flex;
+  flex-wrap: wrap; /* Kotak otomatis turun jika ruang tidak cukup */
+  gap: 16px; /* Jarak antar-kotak */
+  justify-content: space-between; /* Menyebar di seluruh baris */
 }
 
 .product-card {
-  display: flex; /* Membuat produk-card menjadi flex container */
-  flex-direction: column; /* Menyusun gambar dan teks secara vertikal */
-  align-items: center; /* Mengatur agar teks berada di bawah gambar secara rapi */
-  border: 1px solid #ebd9b5;
+  flex: 1 1 calc(33.333% - 16px); /* Tiga kotak dalam satu baris */
+  background: #f8f8f8;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: calc(
-    33% - 1rem
-  ); /* Mengatur lebar card agar ada 3 card dalam satu baris */
-  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .feature-list {
+    flex-direction: column; /* Atur semua kotak menjadi vertikal */
+    gap: 12px; /* Jarak antar-kotak lebih kecil untuk ponsel */
+  }
+
+  .product-card {
+    flex: 1 1 100%; /* Setiap kotak mengambil lebar penuh */
+  }
 }
 
 .product-card img {
@@ -193,6 +220,13 @@ body.dark-mode footer {
   opacity: 0;
 }
 
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+
 .modal-content {
   position: relative;
   background-color: #ffffff;
@@ -232,4 +266,170 @@ body.dark-mode footer {
 
 .close-button:hover {
   background-color: #b38a35;
+}
+
+.steps {
+  padding: 2rem 1rem;
+  background-color: #fef6e0;
+  text-align: center;
+}
+
+.steps h2 {
+  font-size: 2rem;
+  color: #8b572a;
+  margin-bottom: 2rem;
+}
+
+.step-list {
+  display: flex;
+  flex-wrap: wrap; /* Jika ruang tidak cukup, item akan turun */
+  gap: 16px; /* Jarak antar-step */
+  justify-content: space-between; /* Menyebar merata */
+}
+
+
+.step {
+  flex: 1 1 calc(33.333% - 16px); /* Tiga step dalam satu baris */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.step-image {
+  max-width: 100px;
+  margin-bottom: 8px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .step-list {
+    flex-direction: column; /* Semua step ditampilkan vertikal */
+    gap: 12px; /* Jarak antar-step lebih kecil */
+  }
+
+  .step {
+    flex: 1 1 100%; /* Setiap step mengambil lebar penuh */
+  }
+}
+
+.step-image:hover {
+  transform: scale(1.05);
+}
+
+.step-content h3 {
+  font-size: 1.2rem;
+  color: #8b572a;
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Dark Mode untuk Tata Cara Bergabung */
+body.dark-mode .steps {
+  background-color: #1e1e1e; /* Warna latar belakang gelap */
+}
+
+body.dark-mode .steps h2 {
+  color: #daa520; /* Warna emas untuk judul */
+}
+
+body.dark-mode .step {
+  background-color: #2a2a2a; /* Warna gelap untuk kotak step */
+  border: 1px solid #444; /* Border lebih gelap */
+}
+
+body.dark-mode .step-content h3 {
+  color: #daa520; /* Warna emas untuk judul di dalam step */
+}
+
+body.dark-mode .step-content p {
+  color: #ffffff; /* Warna putih untuk teks deskripsi */
+}
+
+/* Verifikasi Section */
+.verification {
+  padding: 2rem 1rem;
+  background-color: #fffbe7;
+  text-align: center;
+}
+
+.verification h2 {
+  font-size: 2rem;
+  color: #8b572a;
+  margin-bottom: 1rem;
+}
+
+.verification p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.verification a {
+  color: #daa520;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.verification a:hover {
+  color: #b38a35;
+}
+
+/* Dark Mode untuk Verifikasi */
+body.dark-mode .verification {
+  background-color: #1e1e1e; /* Warna latar belakang gelap */
+}
+
+body.dark-mode .verification h2 {
+  color: #daa520; /* Warna emas untuk judul */
+}
+
+body.dark-mode .verification p {
+  color: #ffffff; /* Warna putih untuk teks deskripsi */
+}
+
+body.dark-mode .verification a {
+  color: #daa520; /* Warna emas untuk tautan */
+}
+
+body.dark-mode .verification a:hover {
+  color: #b38a35; /* Warna hover */
+}
+
+/* Dark Mode untuk Tombol "Daftar Sekarang" */
+body.dark-mode .verification a.cta-button {
+  background-color: #444444; /* Warna gelap untuk tombol */
+  color: #ffffff; /* Warna teks putih */
+  border: 1px solid #daa520; /* Border warna emas */
+}
+
+body.dark-mode .verification a.cta-button:hover {
+  background-color: #5a5a5a; /* Warna lebih terang saat hover */
+  color: #daa520; /* Warna teks emas saat hover */
+}
+
+/* Light Mode untuk Tombol "Daftar Sekarang" */
+body.light-mode .verification a.cta-button {
+  background-color: #daa520; /* Warna emas */
+  color: #ffffff; /* Warna teks putih */
+  border: none; /* Tanpa border */
+}
+
+body.light-mode .verification a.cta-button:hover {
+  background-color: #b38a35; /* Warna hover lebih gelap */
+  color: #ffffff; /* Warna teks tetap putih */
 }
