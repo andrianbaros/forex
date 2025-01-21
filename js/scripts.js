@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (darkModeToggle) {
     darkModeToggle.addEventListener("click", () => {
       const body = document.body;
-      body.classList.toggle("light-mode");
       body.classList.toggle("dark-mode");
+      body.classList.toggle("light-mode");
       const icon = document.querySelector("#dark-mode-toggle i");
       if (icon) {
         icon.classList.toggle("fa-toggle-on");
