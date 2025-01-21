@@ -22,14 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const translations = {
         en: {
           heroTitle: "Welcome to Learning Together Exness ID",
-          heroText: "Join our community and enjoy exclusive benefits as a VIP member.",
+          heroText:
+            "Join our community and enjoy exclusive benefits as a VIP member.",
           ctaButton: "Join Now",
           productsTitle: "Benefits of Studying With Us",
           footerText: "© All rights reserved.",
         },
         id: {
           heroTitle: "Selamat Datang di Belajar Forex Bersama Exness ID",
-          heroText: "Bergabunglah dengan komunitas kami dan nikmati berbagai keuntungan eksklusif sebagai anggota VIP.",
+          heroText:
+            "Bergabunglah dengan komunitas kami dan nikmati berbagai keuntungan eksklusif sebagai anggota VIP.",
           ctaButton: "Bergabung Sekarang",
           productsTitle: "keuntungan Belajar Dengan Kami",
           footerText: "© Hak cipta dilindungi.",
@@ -40,11 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("hero-title").textContent = content.heroTitle;
       document.getElementById("hero-text").textContent = content.heroText;
       document.getElementById("cta-button").textContent = content.ctaButton;
-      document.getElementById("products-title").textContent = content.productsTitle;
+      document.getElementById("products-title").textContent =
+        content.productsTitle;
       document.getElementById("footer-text").textContent = content.footerText;
     });
   }
-  
 
   // Modal functionality
   const modal = document.getElementById("image-modal");
@@ -113,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Modal atau elemen terkait tidak ditemukan.");
   }
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("image-modal");

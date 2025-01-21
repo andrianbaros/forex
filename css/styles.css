@@ -7,32 +7,30 @@ body {
 }
 
 /* White Mode */
-body.light-mode {
+body.dark-mode {
   background-color: #fafafa;
   color: #8b572a;
 }
 
 /* Dark Mode untuk Judul Section Products */
-body.dark-mode #products-title {
+body.light-mode #products-title {
   color: #daa520; /* Warna emas untuk judul */
 }
 
-
 /* Dark Mode */
-body.dark-mode {
+body.light-mode {
   background-color: #1a1a1a;
   color: #daa520; /* Warna teks dalam dark mode */
 }
 
 /* Dark Mode untuk Produk */
-body.dark-mode .product-card h3 {
+body.light-mode .product-card h3 {
   color: #daa520; /* Warna emas */
 }
 
-body.dark-mode .product-card p {
+body.light-mode .product-card p {
   color: #ffffff; /* Warna putih */
 }
-
 
 /* Navbar */
 .navbar {
@@ -179,25 +177,25 @@ footer {
 }
 
 /* Dark Mode Specific */
-body.dark-mode .navbar {
+body.light-mode .navbar {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-body.dark-mode .hero {
+body.light-mode .hero {
   background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
   color: #daa520;
 }
 
-body.dark-mode .products {
+body.light-mode .products {
   background-color: #1e1e1e;
 }
 
-body.dark-mode .product-card {
+body.light-mode .product-card {
   border: 1px solid #444;
   background-color: #2a2a2a;
 }
 
-body.dark-mode footer {
+body.light-mode footer {
   background-color: #1a1a1a;
   color: #daa520;
 }
@@ -225,7 +223,6 @@ body.dark-mode footer {
   opacity: 0;
   transition: visibility 0.3s, opacity 0.3s;
 }
-
 
 .modal-content {
   position: relative;
@@ -287,7 +284,6 @@ body.dark-mode footer {
   justify-content: space-between; /* Menyebar merata */
 }
 
-
 .step {
   flex: 1 1 calc(33.333% - 16px); /* Tiga step dalam satu baris */
   background: #f9f9f9;
@@ -300,7 +296,6 @@ body.dark-mode footer {
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 .step:hover {
   transform: translateY(-5px);
@@ -340,24 +335,24 @@ body.dark-mode footer {
 }
 
 /* Dark Mode untuk Tata Cara Bergabung */
-body.dark-mode .steps {
+body.light-mode .steps {
   background-color: #1e1e1e; /* Warna latar belakang gelap */
 }
 
-body.dark-mode .steps h2 {
+body.light-mode .steps h2 {
   color: #daa520; /* Warna emas untuk judul */
 }
 
-body.dark-mode .step {
+body.light-mode .step {
   background-color: #2a2a2a; /* Warna gelap untuk kotak step */
   border: 1px solid #444; /* Border lebih gelap */
 }
 
-body.dark-mode .step-content h3 {
+body.light-mode .step-content h3 {
   color: #daa520; /* Warna emas untuk judul di dalam step */
 }
 
-body.dark-mode .step-content p {
+body.light-mode .step-content p {
   color: #ffffff; /* Warna putih untuk teks deskripsi */
 }
 
@@ -390,46 +385,46 @@ body.dark-mode .step-content p {
 }
 
 /* Dark Mode untuk Verifikasi */
-body.dark-mode .verification {
+body.light-mode .verification {
   background-color: #1e1e1e; /* Warna latar belakang gelap */
 }
 
-body.dark-mode .verification h2 {
+body.light-mode .verification h2 {
   color: #daa520; /* Warna emas untuk judul */
 }
 
-body.dark-mode .verification p {
+body.light-mode .verification p {
   color: #ffffff; /* Warna putih untuk teks deskripsi */
 }
 
-body.dark-mode .verification a {
+body.light-mode .verification a {
   color: #daa520; /* Warna emas untuk tautan */
 }
 
-body.dark-mode .verification a:hover {
+body.light-mode .verification a:hover {
   color: #b38a35; /* Warna hover */
 }
 
 /* Dark Mode untuk Tombol "Daftar Sekarang" */
-body.dark-mode .verification a.cta-button {
+body.light-mode .verification a.cta-button {
   background-color: #444444; /* Warna gelap untuk tombol */
   color: #ffffff; /* Warna teks putih */
   border: 1px solid #daa520; /* Border warna emas */
 }
 
-body.dark-mode .verification a.cta-button:hover {
+body.light-mode .verification a.cta-button:hover {
   background-color: #5a5a5a; /* Warna lebih terang saat hover */
   color: #daa520; /* Warna teks emas saat hover */
 }
 
 /* Light Mode untuk Tombol "Daftar Sekarang" */
-body.light-mode .verification a.cta-button {
+body.dark-mode .verification a.cta-button {
   background-color: #daa520; /* Warna emas */
   color: #ffffff; /* Warna teks putih */
   border: none; /* Tanpa border */
 }
 
-body.light-mode .verification a.cta-button:hover {
+body.dark-mode .verification a.cta-button:hover {
   background-color: #b38a35; /* Warna hover lebih gelap */
   color: #ffffff; /* Warna teks tetap putih */
 }
